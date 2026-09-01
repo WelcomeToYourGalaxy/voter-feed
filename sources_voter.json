@@ -1,1591 +1,1909 @@
 {
-  "_note": [
-    "Sources for the voter wire.",
-    "",
-    "direct: feeds proven working in the sibling Welcome to Your Galaxy repos.",
-    "  Nothing invented — an untested feed URL reports itself unreachable on every",
-    "  harvest and quietly makes the coverage figure a lie.",
-    "",
-    "gnews: Google News locale searches; the harvester builds the URL from",
-    "  hl / gl / ceid. Twenty-four queries rotate across 46 locales.",
-    "",
-    "events: subject searches for observer missions, rulings, enforcement and the",
-    "  recurring integrity indices.",
-    "",
-    "standing is provenance, not importance:",
-    "  official  electoral commissions, courts, prosecutors, observer missions",
-    "  research  election monitoring, integrity indices, money-in-politics research",
-    "  press     general news across the locales",
-    "  rights    transparency and voting rights organisations",
-    "",
-    "Worth adding, with URLs you have opened: International IDEA, the Electoral",
-    "Integrity Project, OSCE/ODIHR, the Carter Center, NDI, IFES, ACE Project,",
-    "OpenSecrets, ACLED and the Brennan Center."
-  ],
-  "direct": [
-    {
-      "name": "OHCHR — news",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://www.ohchr.org/en/rss/news"
-    },
-    {
-      "name": "UN News — Human Rights",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://news.un.org/feed/subscribe/en/news/topic/human-rights/feed/rss.xml"
-    },
-    {
-      "name": "UN Special Procedures",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://www.ohchr.org/en/rss/special-procedures"
-    },
-    {
-      "name": "European Court of Human Rights",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://www.echr.coe.int/rss"
-    },
-    {
-      "name": "Inter-American Commission on Human Rights",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://www.oas.org/en/iachr/rss/rss_pr.xml"
-    },
-    {
-      "name": "US Department of Justice",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://www.justice.gov/feeds/opa/justice-news.xml"
-    },
-    {
-      "name": "Europol",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://www.europol.europa.eu/rss.xml"
-    },
-    {
-      "name": "European Commission",
-      "lang": "en",
-      "standing": "official",
-      "url": "https://ec.europa.eu/commission/presscorner/api/rss"
-    },
-    {
-      "name": "Freedom House",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://freedomhouse.org/rss.xml"
-    },
-    {
-      "name": "CIVICUS Monitor",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://monitor.civicus.org/feed/"
-    },
-    {
-      "name": "Human Rights Watch",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://www.hrw.org/rss/news"
-    },
-    {
-      "name": "Amnesty International",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://www.amnesty.org/en/rss/"
-    },
-    {
-      "name": "Bellingcat",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://www.bellingcat.com/feed/"
-    },
-    {
-      "name": "Peterson Institute",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://www.piie.com/rss.xml"
-    },
-    {
-      "name": "CEPR",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://cepr.org/rss.xml"
-    },
-    {
-      "name": "ODI",
-      "lang": "en",
-      "standing": "research",
-      "url": "https://odi.org/en/feed/"
-    },
-    {
-      "name": "Transparency International",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://www.transparency.org/en/rss"
-    },
-    {
-      "name": "Global Witness",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://www.globalwitness.org/en/rss/"
-    },
-    {
-      "name": "Corporate Europe Observatory",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://corporateeurope.org/en/rss.xml"
-    },
-    {
-      "name": "Public Citizen · Global Trade Watch",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://www.citizen.org/feed/"
-    },
-    {
-      "name": "Statewatch",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://www.statewatch.org/rss/"
-    },
-    {
-      "name": "Article 19",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://www.article19.org/feed/"
-    },
-    {
-      "name": "Access Now",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://www.accessnow.org/feed/"
-    },
-    {
-      "name": "EDRi",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://edri.org/feed/"
-    },
-    {
-      "name": "Privacy International",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://privacyinternational.org/rss.xml"
-    },
-    {
-      "name": "Front Line Defenders",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://www.frontlinedefenders.org/rss.xml"
-    },
-    {
-      "name": "Financial Transparency Coalition",
-      "lang": "en",
-      "standing": "rights",
-      "url": "https://financialtransparency.org/feed/"
-    },
-    {
-      "name": "The Marshall Project",
-      "lang": "en",
-      "standing": "press",
-      "url": "https://www.themarshallproject.org/rss/recent.rss"
-    },
-    {
-      "name": "The Intercept",
-      "lang": "en",
-      "standing": "press",
-      "url": "https://theintercept.com/feed/?rss"
-    }
-  ],
-  "gnews": [
-    {
-      "label": "English (US) 1",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"voter suppression\" OR \"voter intimidation\" OR \"voting rights\" restricted"
-    },
-    {
-      "label": "English (US) 2",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"campaign finance\" OR \"political donation\" limit OR reform"
-    },
-    {
-      "label": "English (US) 3",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"dark money\" OR \"undisclosed donor\" OR \"shell company\" donation"
-    },
-    {
-      "label": "English (UK) 4",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-GB",
-      "gl": "GB",
-      "ceid": "GB:en-GB",
-      "query": "\"foreign interference\" election OR \"election interference\" OR \"influence operation\""
-    },
-    {
-      "label": "English (UK) 5",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-GB",
-      "gl": "GB",
-      "ceid": "GB:en-GB",
-      "query": "\"vote buying\" OR clientelism OR \"cash for votes\""
-    },
-    {
-      "label": "English (UK) 6",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-GB",
-      "gl": "GB",
-      "ceid": "GB:en-GB",
-      "query": "\"ballot stuffing\" OR \"electoral fraud\" OR \"rigged election\""
-    },
-    {
-      "label": "English (India) 7",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-IN",
-      "gl": "IN",
-      "ceid": "IN:en",
-      "query": "\"electoral violence\" OR candidate assassinated OR politician killed election"
-    },
-    {
-      "label": "English (India) 8",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-IN",
-      "gl": "IN",
-      "ceid": "IN:en",
-      "query": "gerrymandering OR redistricting ruling OR \"electoral boundaries\" review"
-    },
-    {
-      "label": "English (India) 9",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-IN",
-      "gl": "IN",
-      "ceid": "IN:en",
-      "query": "\"voter roll\" purge OR \"electoral register\" inaccurate OR registration barrier"
-    },
-    {
-      "label": "English (Nigeria) 10",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-NG",
-      "gl": "NG",
-      "ceid": "NG:en",
-      "query": "\"polling station\" closed OR \"long lines\" voting OR \"early voting\" cut"
-    },
-    {
-      "label": "English (Nigeria) 11",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-NG",
-      "gl": "NG",
-      "ceid": "NG:en",
-      "query": "\"mail ballot\" rejected OR \"postal vote\" restricted OR \"drop box\""
-    },
-    {
-      "label": "English (Nigeria) 12",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-NG",
-      "gl": "NG",
-      "ceid": "NG:en",
-      "query": "disenfranchisement OR \"felony voting\" OR \"prisoner voting\" ruling"
-    },
-    {
-      "label": "English (South Africa) 13",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-ZA",
-      "gl": "ZA",
-      "ceid": "ZA:en",
-      "query": "\"election observation\" mission OR observer report OR \"electoral integrity\""
-    },
-    {
-      "label": "English (South Africa) 14",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-ZA",
-      "gl": "ZA",
-      "ceid": "ZA:en",
-      "query": "\"electoral commission\" bias OR partisan OR \"returning officer\" dispute"
-    },
-    {
-      "label": "English (South Africa) 15",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-ZA",
-      "gl": "ZA",
-      "ceid": "ZA:en",
-      "query": "\"opposition banned\" OR \"opposition leader jailed\" OR candidate disqualified"
-    },
-    {
-      "label": "English (Australia) 16",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-AU",
-      "gl": "AU",
-      "ceid": "AU:en",
-      "query": "\"internet shutdown\" election OR journalist arrested election OR state media bias"
-    },
-    {
-      "label": "English (Australia) 17",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-AU",
-      "gl": "AU",
-      "ceid": "AU:en",
-      "query": "\"super pac\" OR \"outside spending\" OR \"independent expenditure\""
-    },
-    {
-      "label": "English (Australia) 18",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-AU",
-      "gl": "AU",
-      "ceid": "AU:en",
-      "query": "\"political advertising\" spending OR microtargeting OR deepfake election"
-    },
-    {
-      "label": "English (Kenya) 19",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-KE",
-      "gl": "KE",
-      "ceid": "KE:en",
-      "query": "\"election petition\" OR \"electoral court\" OR result annulled OR re-run ordered"
-    },
-    {
-      "label": "English (Kenya) 20",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-KE",
-      "gl": "KE",
-      "ceid": "KE:en",
-      "query": "\"term limit\" scrapped OR extended OR constitutional amendment president"
-    },
-    {
-      "label": "English (Kenya) 21",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-KE",
-      "gl": "KE",
-      "ceid": "KE:en",
-      "query": "\"incumbency advantage\" OR \"re-election rate\" OR unopposed seat"
-    },
-    {
-      "label": "English (Philippines) 22",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-PH",
-      "gl": "PH",
-      "ceid": "PH:en",
-      "query": "\"electoral reform\" OR \"automatic registration\" OR \"ranked choice\" OR \"proportional representation\""
-    },
-    {
-      "label": "English (Philippines) 23",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-PH",
-      "gl": "PH",
-      "ceid": "PH:en",
-      "query": "\"hack and leak\" OR troll farm OR bot network election"
-    },
-    {
-      "label": "English (Philippines) 24",
-      "lang": "en",
-      "standing": "press",
-      "hl": "en-PH",
-      "gl": "PH",
-      "ceid": "PH:en",
-      "query": "\"turnout\" anomaly OR implausible OR forensic audit election"
-    },
-    {
-      "label": "Spanish (Spain) 25",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es",
-      "gl": "ES",
-      "ceid": "ES:es",
-      "query": "\"voter suppression\" OR \"voter intimidation\" OR \"voting rights\" restricted"
-    },
-    {
-      "label": "Spanish (Spain) 26",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es",
-      "gl": "ES",
-      "ceid": "ES:es",
-      "query": "\"campaign finance\" OR \"political donation\" limit OR reform"
-    },
-    {
-      "label": "Spanish (Spain) 27",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es",
-      "gl": "ES",
-      "ceid": "ES:es",
-      "query": "\"dark money\" OR \"undisclosed donor\" OR \"shell company\" donation"
-    },
-    {
-      "label": "Spanish (Mexico) 28",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "MX",
-      "ceid": "MX:es-419",
-      "query": "\"foreign interference\" election OR \"election interference\" OR \"influence operation\""
-    },
-    {
-      "label": "Spanish (Mexico) 29",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "MX",
-      "ceid": "MX:es-419",
-      "query": "\"vote buying\" OR clientelism OR \"cash for votes\""
-    },
-    {
-      "label": "Spanish (Mexico) 30",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "MX",
-      "ceid": "MX:es-419",
-      "query": "\"ballot stuffing\" OR \"electoral fraud\" OR \"rigged election\""
-    },
-    {
-      "label": "Spanish (Argentina) 31",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "AR",
-      "ceid": "AR:es-419",
-      "query": "\"electoral violence\" OR candidate assassinated OR politician killed election"
-    },
-    {
-      "label": "Spanish (Argentina) 32",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "AR",
-      "ceid": "AR:es-419",
-      "query": "gerrymandering OR redistricting ruling OR \"electoral boundaries\" review"
-    },
-    {
-      "label": "Spanish (Argentina) 33",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "AR",
-      "ceid": "AR:es-419",
-      "query": "\"voter roll\" purge OR \"electoral register\" inaccurate OR registration barrier"
-    },
-    {
-      "label": "Spanish (Colombia) 34",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "CO",
-      "ceid": "CO:es-419",
-      "query": "\"polling station\" closed OR \"long lines\" voting OR \"early voting\" cut"
-    },
-    {
-      "label": "Spanish (Colombia) 35",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "CO",
-      "ceid": "CO:es-419",
-      "query": "\"mail ballot\" rejected OR \"postal vote\" restricted OR \"drop box\""
-    },
-    {
-      "label": "Spanish (Colombia) 36",
-      "lang": "es",
-      "standing": "press",
-      "hl": "es-419",
-      "gl": "CO",
-      "ceid": "CO:es-419",
-      "query": "disenfranchisement OR \"felony voting\" OR \"prisoner voting\" ruling"
-    },
-    {
-      "label": "French (France) 37",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "FR",
-      "ceid": "FR:fr",
-      "query": "\"election observation\" mission OR observer report OR \"electoral integrity\""
-    },
-    {
-      "label": "French (France) 38",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "FR",
-      "ceid": "FR:fr",
-      "query": "\"electoral commission\" bias OR partisan OR \"returning officer\" dispute"
-    },
-    {
-      "label": "French (France) 39",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "FR",
-      "ceid": "FR:fr",
-      "query": "\"opposition banned\" OR \"opposition leader jailed\" OR candidate disqualified"
-    },
-    {
-      "label": "French (Senegal) 40",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "SN",
-      "ceid": "SN:fr",
-      "query": "\"internet shutdown\" election OR journalist arrested election OR state media bias"
-    },
-    {
-      "label": "French (Senegal) 41",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "SN",
-      "ceid": "SN:fr",
-      "query": "\"super pac\" OR \"outside spending\" OR \"independent expenditure\""
-    },
-    {
-      "label": "French (Senegal) 42",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "SN",
-      "ceid": "SN:fr",
-      "query": "\"political advertising\" spending OR microtargeting OR deepfake election"
-    },
-    {
-      "label": "French (Canada) 43",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "CA",
-      "ceid": "CA:fr",
-      "query": "\"election petition\" OR \"electoral court\" OR result annulled OR re-run ordered"
-    },
-    {
-      "label": "French (Canada) 44",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "CA",
-      "ceid": "CA:fr",
-      "query": "\"term limit\" scrapped OR extended OR constitutional amendment president"
-    },
-    {
-      "label": "French (Canada) 45",
-      "lang": "fr",
-      "standing": "press",
-      "hl": "fr",
-      "gl": "CA",
-      "ceid": "CA:fr",
-      "query": "\"incumbency advantage\" OR \"re-election rate\" OR unopposed seat"
-    },
-    {
-      "label": "Portuguese (Brazil) 46",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-BR",
-      "gl": "BR",
-      "ceid": "BR:pt-419",
-      "query": "\"electoral reform\" OR \"automatic registration\" OR \"ranked choice\" OR \"proportional representation\""
-    },
-    {
-      "label": "Portuguese (Brazil) 47",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-BR",
-      "gl": "BR",
-      "ceid": "BR:pt-419",
-      "query": "\"hack and leak\" OR troll farm OR bot network election"
-    },
-    {
-      "label": "Portuguese (Brazil) 48",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-BR",
-      "gl": "BR",
-      "ceid": "BR:pt-419",
-      "query": "\"turnout\" anomaly OR implausible OR forensic audit election"
-    },
-    {
-      "label": "Portuguese (Portugal) 49",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-PT",
-      "gl": "PT",
-      "ceid": "PT:pt-150",
-      "query": "\"voter suppression\" OR \"voter intimidation\" OR \"voting rights\" restricted"
-    },
-    {
-      "label": "Portuguese (Portugal) 50",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-PT",
-      "gl": "PT",
-      "ceid": "PT:pt-150",
-      "query": "\"campaign finance\" OR \"political donation\" limit OR reform"
-    },
-    {
-      "label": "Portuguese (Portugal) 51",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-PT",
-      "gl": "PT",
-      "ceid": "PT:pt-150",
-      "query": "\"dark money\" OR \"undisclosed donor\" OR \"shell company\" donation"
-    },
-    {
-      "label": "Portuguese (Angola) 52",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-PT",
-      "gl": "AO",
-      "ceid": "AO:pt-150",
-      "query": "\"foreign interference\" election OR \"election interference\" OR \"influence operation\""
-    },
-    {
-      "label": "Portuguese (Angola) 53",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-PT",
-      "gl": "AO",
-      "ceid": "AO:pt-150",
-      "query": "\"vote buying\" OR clientelism OR \"cash for votes\""
-    },
-    {
-      "label": "Portuguese (Angola) 54",
-      "lang": "pt",
-      "standing": "press",
-      "hl": "pt-PT",
-      "gl": "AO",
-      "ceid": "AO:pt-150",
-      "query": "\"ballot stuffing\" OR \"electoral fraud\" OR \"rigged election\""
-    },
-    {
-      "label": "German (Germany) 55",
-      "lang": "de",
-      "standing": "press",
-      "hl": "de",
-      "gl": "DE",
-      "ceid": "DE:de",
-      "query": "\"electoral violence\" OR candidate assassinated OR politician killed election"
-    },
-    {
-      "label": "German (Germany) 56",
-      "lang": "de",
-      "standing": "press",
-      "hl": "de",
-      "gl": "DE",
-      "ceid": "DE:de",
-      "query": "gerrymandering OR redistricting ruling OR \"electoral boundaries\" review"
-    },
-    {
-      "label": "German (Germany) 57",
-      "lang": "de",
-      "standing": "press",
-      "hl": "de",
-      "gl": "DE",
-      "ceid": "DE:de",
-      "query": "\"voter roll\" purge OR \"electoral register\" inaccurate OR registration barrier"
-    },
-    {
-      "label": "German (Austria) 58",
-      "lang": "de",
-      "standing": "press",
-      "hl": "de",
-      "gl": "AT",
-      "ceid": "AT:de",
-      "query": "\"polling station\" closed OR \"long lines\" voting OR \"early voting\" cut"
-    },
-    {
-      "label": "German (Austria) 59",
-      "lang": "de",
-      "standing": "press",
-      "hl": "de",
-      "gl": "AT",
-      "ceid": "AT:de",
-      "query": "\"mail ballot\" rejected OR \"postal vote\" restricted OR \"drop box\""
-    },
-    {
-      "label": "German (Austria) 60",
-      "lang": "de",
-      "standing": "press",
-      "hl": "de",
-      "gl": "AT",
-      "ceid": "AT:de",
-      "query": "disenfranchisement OR \"felony voting\" OR \"prisoner voting\" ruling"
-    },
-    {
-      "label": "Russian (Russia) 61",
-      "lang": "ru",
-      "standing": "press",
-      "hl": "ru",
-      "gl": "RU",
-      "ceid": "RU:ru",
-      "query": "\"election observation\" mission OR observer report OR \"electoral integrity\""
-    },
-    {
-      "label": "Russian (Russia) 62",
-      "lang": "ru",
-      "standing": "press",
-      "hl": "ru",
-      "gl": "RU",
-      "ceid": "RU:ru",
-      "query": "\"electoral commission\" bias OR partisan OR \"returning officer\" dispute"
-    },
-    {
-      "label": "Russian (Russia) 63",
-      "lang": "ru",
-      "standing": "press",
-      "hl": "ru",
-      "gl": "RU",
-      "ceid": "RU:ru",
-      "query": "\"opposition banned\" OR \"opposition leader jailed\" OR candidate disqualified"
-    },
-    {
-      "label": "Russian (Kazakhstan) 64",
-      "lang": "ru",
-      "standing": "press",
-      "hl": "ru",
-      "gl": "KZ",
-      "ceid": "KZ:ru",
-      "query": "\"internet shutdown\" election OR journalist arrested election OR state media bias"
-    },
-    {
-      "label": "Russian (Kazakhstan) 65",
-      "lang": "ru",
-      "standing": "press",
-      "hl": "ru",
-      "gl": "KZ",
-      "ceid": "KZ:ru",
-      "query": "\"super pac\" OR \"outside spending\" OR \"independent expenditure\""
-    },
-    {
-      "label": "Russian (Kazakhstan) 66",
-      "lang": "ru",
-      "standing": "press",
-      "hl": "ru",
-      "gl": "KZ",
-      "ceid": "KZ:ru",
-      "query": "\"political advertising\" spending OR microtargeting OR deepfake election"
-    },
-    {
-      "label": "Arabic (Egypt) 67",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "EG",
-      "ceid": "EG:ar",
-      "query": "\"election petition\" OR \"electoral court\" OR result annulled OR re-run ordered"
-    },
-    {
-      "label": "Arabic (Egypt) 68",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "EG",
-      "ceid": "EG:ar",
-      "query": "\"term limit\" scrapped OR extended OR constitutional amendment president"
-    },
-    {
-      "label": "Arabic (Egypt) 69",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "EG",
-      "ceid": "EG:ar",
-      "query": "\"incumbency advantage\" OR \"re-election rate\" OR unopposed seat"
-    },
-    {
-      "label": "Arabic (UAE) 70",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "AE",
-      "ceid": "AE:ar",
-      "query": "\"electoral reform\" OR \"automatic registration\" OR \"ranked choice\" OR \"proportional representation\""
-    },
-    {
-      "label": "Arabic (UAE) 71",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "AE",
-      "ceid": "AE:ar",
-      "query": "\"hack and leak\" OR troll farm OR bot network election"
-    },
-    {
-      "label": "Arabic (UAE) 72",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "AE",
-      "ceid": "AE:ar",
-      "query": "\"turnout\" anomaly OR implausible OR forensic audit election"
-    },
-    {
-      "label": "Arabic (Lebanon) 73",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "LB",
-      "ceid": "LB:ar",
-      "query": "\"voter suppression\" OR \"voter intimidation\" OR \"voting rights\" restricted"
-    },
-    {
-      "label": "Arabic (Lebanon) 74",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "LB",
-      "ceid": "LB:ar",
-      "query": "\"campaign finance\" OR \"political donation\" limit OR reform"
-    },
-    {
-      "label": "Arabic (Lebanon) 75",
-      "lang": "ar",
-      "standing": "press",
-      "hl": "ar",
-      "gl": "LB",
-      "ceid": "LB:ar",
-      "query": "\"dark money\" OR \"undisclosed donor\" OR \"shell company\" donation"
-    },
-    {
-      "label": "Chinese (Mainland) 76",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-CN",
-      "gl": "CN",
-      "ceid": "CN:zh-Hans",
-      "query": "\"foreign interference\" election OR \"election interference\" OR \"influence operation\""
-    },
-    {
-      "label": "Chinese (Mainland) 77",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-CN",
-      "gl": "CN",
-      "ceid": "CN:zh-Hans",
-      "query": "\"vote buying\" OR clientelism OR \"cash for votes\""
-    },
-    {
-      "label": "Chinese (Mainland) 78",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-CN",
-      "gl": "CN",
-      "ceid": "CN:zh-Hans",
-      "query": "\"ballot stuffing\" OR \"electoral fraud\" OR \"rigged election\""
-    },
-    {
-      "label": "Chinese (Taiwan) 79",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-TW",
-      "gl": "TW",
-      "ceid": "TW:zh-Hant",
-      "query": "\"electoral violence\" OR candidate assassinated OR politician killed election"
-    },
-    {
-      "label": "Chinese (Taiwan) 80",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-TW",
-      "gl": "TW",
-      "ceid": "TW:zh-Hant",
-      "query": "gerrymandering OR redistricting ruling OR \"electoral boundaries\" review"
-    },
-    {
-      "label": "Chinese (Taiwan) 81",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-TW",
-      "gl": "TW",
-      "ceid": "TW:zh-Hant",
-      "query": "\"voter roll\" purge OR \"electoral register\" inaccurate OR registration barrier"
-    },
-    {
-      "label": "Chinese (Hong Kong) 82",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-HK",
-      "gl": "HK",
-      "ceid": "HK:zh-Hant",
-      "query": "\"polling station\" closed OR \"long lines\" voting OR \"early voting\" cut"
-    },
-    {
-      "label": "Chinese (Hong Kong) 83",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-HK",
-      "gl": "HK",
-      "ceid": "HK:zh-Hant",
-      "query": "\"mail ballot\" rejected OR \"postal vote\" restricted OR \"drop box\""
-    },
-    {
-      "label": "Chinese (Hong Kong) 84",
-      "lang": "zh",
-      "standing": "press",
-      "hl": "zh-HK",
-      "gl": "HK",
-      "ceid": "HK:zh-Hant",
-      "query": "disenfranchisement OR \"felony voting\" OR \"prisoner voting\" ruling"
-    },
-    {
-      "label": "Hindi (India) 85",
-      "lang": "hi",
-      "standing": "press",
-      "hl": "hi",
-      "gl": "IN",
-      "ceid": "IN:hi",
-      "query": "\"election observation\" mission OR observer report OR \"electoral integrity\""
-    },
-    {
-      "label": "Hindi (India) 86",
-      "lang": "hi",
-      "standing": "press",
-      "hl": "hi",
-      "gl": "IN",
-      "ceid": "IN:hi",
-      "query": "\"electoral commission\" bias OR partisan OR \"returning officer\" dispute"
-    },
-    {
-      "label": "Hindi (India) 87",
-      "lang": "hi",
-      "standing": "press",
-      "hl": "hi",
-      "gl": "IN",
-      "ceid": "IN:hi",
-      "query": "\"opposition banned\" OR \"opposition leader jailed\" OR candidate disqualified"
-    },
-    {
-      "label": "Bengali (Bangladesh) 88",
-      "lang": "bn",
-      "standing": "press",
-      "hl": "bn",
-      "gl": "BD",
-      "ceid": "BD:bn",
-      "query": "\"internet shutdown\" election OR journalist arrested election OR state media bias"
-    },
-    {
-      "label": "Bengali (Bangladesh) 89",
-      "lang": "bn",
-      "standing": "press",
-      "hl": "bn",
-      "gl": "BD",
-      "ceid": "BD:bn",
-      "query": "\"super pac\" OR \"outside spending\" OR \"independent expenditure\""
-    },
-    {
-      "label": "Bengali (Bangladesh) 90",
-      "lang": "bn",
-      "standing": "press",
-      "hl": "bn",
-      "gl": "BD",
-      "ceid": "BD:bn",
-      "query": "\"political advertising\" spending OR microtargeting OR deepfake election"
-    },
-    {
-      "label": "Indonesian 91",
-      "lang": "id",
-      "standing": "press",
-      "hl": "id",
-      "gl": "ID",
-      "ceid": "ID:id",
-      "query": "\"election petition\" OR \"electoral court\" OR result annulled OR re-run ordered"
-    },
-    {
-      "label": "Indonesian 92",
-      "lang": "id",
-      "standing": "press",
-      "hl": "id",
-      "gl": "ID",
-      "ceid": "ID:id",
-      "query": "\"term limit\" scrapped OR extended OR constitutional amendment president"
-    },
-    {
-      "label": "Indonesian 93",
-      "lang": "id",
-      "standing": "press",
-      "hl": "id",
-      "gl": "ID",
-      "ceid": "ID:id",
-      "query": "\"incumbency advantage\" OR \"re-election rate\" OR unopposed seat"
-    },
-    {
-      "label": "Japanese 94",
-      "lang": "ja",
-      "standing": "press",
-      "hl": "ja",
-      "gl": "JP",
-      "ceid": "JP:ja",
-      "query": "\"electoral reform\" OR \"automatic registration\" OR \"ranked choice\" OR \"proportional representation\""
-    },
-    {
-      "label": "Japanese 95",
-      "lang": "ja",
-      "standing": "press",
-      "hl": "ja",
-      "gl": "JP",
-      "ceid": "JP:ja",
-      "query": "\"hack and leak\" OR troll farm OR bot network election"
-    },
-    {
-      "label": "Japanese 96",
-      "lang": "ja",
-      "standing": "press",
-      "hl": "ja",
-      "gl": "JP",
-      "ceid": "JP:ja",
-      "query": "\"turnout\" anomaly OR implausible OR forensic audit election"
-    },
-    {
-      "label": "Korean 97",
-      "lang": "ko",
-      "standing": "press",
-      "hl": "ko",
-      "gl": "KR",
-      "ceid": "KR:ko",
-      "query": "\"voter suppression\" OR \"voter intimidation\" OR \"voting rights\" restricted"
-    },
-    {
-      "label": "Korean 98",
-      "lang": "ko",
-      "standing": "press",
-      "hl": "ko",
-      "gl": "KR",
-      "ceid": "KR:ko",
-      "query": "\"campaign finance\" OR \"political donation\" limit OR reform"
-    },
-    {
-      "label": "Korean 99",
-      "lang": "ko",
-      "standing": "press",
-      "hl": "ko",
-      "gl": "KR",
-      "ceid": "KR:ko",
-      "query": "\"dark money\" OR \"undisclosed donor\" OR \"shell company\" donation"
-    },
-    {
-      "label": "Turkish 100",
-      "lang": "tr",
-      "standing": "press",
-      "hl": "tr",
-      "gl": "TR",
-      "ceid": "TR:tr",
-      "query": "\"foreign interference\" election OR \"election interference\" OR \"influence operation\""
-    },
-    {
-      "label": "Turkish 101",
-      "lang": "tr",
-      "standing": "press",
-      "hl": "tr",
-      "gl": "TR",
-      "ceid": "TR:tr",
-      "query": "\"vote buying\" OR clientelism OR \"cash for votes\""
-    },
-    {
-      "label": "Turkish 102",
-      "lang": "tr",
-      "standing": "press",
-      "hl": "tr",
-      "gl": "TR",
-      "ceid": "TR:tr",
-      "query": "\"ballot stuffing\" OR \"electoral fraud\" OR \"rigged election\""
-    },
-    {
-      "label": "Italian 103",
-      "lang": "it",
-      "standing": "press",
-      "hl": "it",
-      "gl": "IT",
-      "ceid": "IT:it",
-      "query": "\"electoral violence\" OR candidate assassinated OR politician killed election"
-    },
-    {
-      "label": "Italian 104",
-      "lang": "it",
-      "standing": "press",
-      "hl": "it",
-      "gl": "IT",
-      "ceid": "IT:it",
-      "query": "gerrymandering OR redistricting ruling OR \"electoral boundaries\" review"
-    },
-    {
-      "label": "Italian 105",
-      "lang": "it",
-      "standing": "press",
-      "hl": "it",
-      "gl": "IT",
-      "ceid": "IT:it",
-      "query": "\"voter roll\" purge OR \"electoral register\" inaccurate OR registration barrier"
-    },
-    {
-      "label": "Dutch 106",
-      "lang": "nl",
-      "standing": "press",
-      "hl": "nl",
-      "gl": "NL",
-      "ceid": "NL:nl",
-      "query": "\"polling station\" closed OR \"long lines\" voting OR \"early voting\" cut"
-    },
-    {
-      "label": "Dutch 107",
-      "lang": "nl",
-      "standing": "press",
-      "hl": "nl",
-      "gl": "NL",
-      "ceid": "NL:nl",
-      "query": "\"mail ballot\" rejected OR \"postal vote\" restricted OR \"drop box\""
-    },
-    {
-      "label": "Dutch 108",
-      "lang": "nl",
-      "standing": "press",
-      "hl": "nl",
-      "gl": "NL",
-      "ceid": "NL:nl",
-      "query": "disenfranchisement OR \"felony voting\" OR \"prisoner voting\" ruling"
-    },
-    {
-      "label": "Polish 109",
-      "lang": "pl",
-      "standing": "press",
-      "hl": "pl",
-      "gl": "PL",
-      "ceid": "PL:pl",
-      "query": "\"election observation\" mission OR observer report OR \"electoral integrity\""
-    },
-    {
-      "label": "Polish 110",
-      "lang": "pl",
-      "standing": "press",
-      "hl": "pl",
-      "gl": "PL",
-      "ceid": "PL:pl",
-      "query": "\"electoral commission\" bias OR partisan OR \"returning officer\" dispute"
-    },
-    {
-      "label": "Polish 111",
-      "lang": "pl",
-      "standing": "press",
-      "hl": "pl",
-      "gl": "PL",
-      "ceid": "PL:pl",
-      "query": "\"opposition banned\" OR \"opposition leader jailed\" OR candidate disqualified"
-    },
-    {
-      "label": "Swedish 112",
-      "lang": "sv",
-      "standing": "press",
-      "hl": "sv",
-      "gl": "SE",
-      "ceid": "SE:sv",
-      "query": "\"internet shutdown\" election OR journalist arrested election OR state media bias"
-    },
-    {
-      "label": "Swedish 113",
-      "lang": "sv",
-      "standing": "press",
-      "hl": "sv",
-      "gl": "SE",
-      "ceid": "SE:sv",
-      "query": "\"super pac\" OR \"outside spending\" OR \"independent expenditure\""
-    },
-    {
-      "label": "Swedish 114",
-      "lang": "sv",
-      "standing": "press",
-      "hl": "sv",
-      "gl": "SE",
-      "ceid": "SE:sv",
-      "query": "\"political advertising\" spending OR microtargeting OR deepfake election"
-    },
-    {
-      "label": "Ukrainian 115",
-      "lang": "uk",
-      "standing": "press",
-      "hl": "uk",
-      "gl": "UA",
-      "ceid": "UA:uk",
-      "query": "\"election petition\" OR \"electoral court\" OR result annulled OR re-run ordered"
-    },
-    {
-      "label": "Ukrainian 116",
-      "lang": "uk",
-      "standing": "press",
-      "hl": "uk",
-      "gl": "UA",
-      "ceid": "UA:uk",
-      "query": "\"term limit\" scrapped OR extended OR constitutional amendment president"
-    },
-    {
-      "label": "Ukrainian 117",
-      "lang": "uk",
-      "standing": "press",
-      "hl": "uk",
-      "gl": "UA",
-      "ceid": "UA:uk",
-      "query": "\"incumbency advantage\" OR \"re-election rate\" OR unopposed seat"
-    },
-    {
-      "label": "Greek 118",
-      "lang": "el",
-      "standing": "press",
-      "hl": "el",
-      "gl": "GR",
-      "ceid": "GR:el",
-      "query": "\"electoral reform\" OR \"automatic registration\" OR \"ranked choice\" OR \"proportional representation\""
-    },
-    {
-      "label": "Greek 119",
-      "lang": "el",
-      "standing": "press",
-      "hl": "el",
-      "gl": "GR",
-      "ceid": "GR:el",
-      "query": "\"hack and leak\" OR troll farm OR bot network election"
-    },
-    {
-      "label": "Greek 120",
-      "lang": "el",
-      "standing": "press",
-      "hl": "el",
-      "gl": "GR",
-      "ceid": "GR:el",
-      "query": "\"turnout\" anomaly OR implausible OR forensic audit election"
-    },
-    {
-      "label": "Persian 121",
-      "lang": "fa",
-      "standing": "press",
-      "hl": "fa",
-      "gl": "IR",
-      "ceid": "IR:fa",
-      "query": "\"voter suppression\" OR \"voter intimidation\" OR \"voting rights\" restricted"
-    },
-    {
-      "label": "Persian 122",
-      "lang": "fa",
-      "standing": "press",
-      "hl": "fa",
-      "gl": "IR",
-      "ceid": "IR:fa",
-      "query": "\"campaign finance\" OR \"political donation\" limit OR reform"
-    },
-    {
-      "label": "Persian 123",
-      "lang": "fa",
-      "standing": "press",
-      "hl": "fa",
-      "gl": "IR",
-      "ceid": "IR:fa",
-      "query": "\"dark money\" OR \"undisclosed donor\" OR \"shell company\" donation"
-    },
-    {
-      "label": "Vietnamese 124",
-      "lang": "vi",
-      "standing": "press",
-      "hl": "vi",
-      "gl": "VN",
-      "ceid": "VN:vi",
-      "query": "\"foreign interference\" election OR \"election interference\" OR \"influence operation\""
-    },
-    {
-      "label": "Vietnamese 125",
-      "lang": "vi",
-      "standing": "press",
-      "hl": "vi",
-      "gl": "VN",
-      "ceid": "VN:vi",
-      "query": "\"vote buying\" OR clientelism OR \"cash for votes\""
-    },
-    {
-      "label": "Vietnamese 126",
-      "lang": "vi",
-      "standing": "press",
-      "hl": "vi",
-      "gl": "VN",
-      "ceid": "VN:vi",
-      "query": "\"ballot stuffing\" OR \"electoral fraud\" OR \"rigged election\""
-    },
-    {
-      "label": "Thai 127",
-      "lang": "th",
-      "standing": "press",
-      "hl": "th",
-      "gl": "TH",
-      "ceid": "TH:th",
-      "query": "\"electoral violence\" OR candidate assassinated OR politician killed election"
-    },
-    {
-      "label": "Thai 128",
-      "lang": "th",
-      "standing": "press",
-      "hl": "th",
-      "gl": "TH",
-      "ceid": "TH:th",
-      "query": "gerrymandering OR redistricting ruling OR \"electoral boundaries\" review"
-    },
-    {
-      "label": "Thai 129",
-      "lang": "th",
-      "standing": "press",
-      "hl": "th",
-      "gl": "TH",
-      "ceid": "TH:th",
-      "query": "\"voter roll\" purge OR \"electoral register\" inaccurate OR registration barrier"
-    },
-    {
-      "label": "Swahili (Kenya) 130",
-      "lang": "sw",
-      "standing": "press",
-      "hl": "sw",
-      "gl": "KE",
-      "ceid": "KE:sw",
-      "query": "\"polling station\" closed OR \"long lines\" voting OR \"early voting\" cut"
-    },
-    {
-      "label": "Swahili (Kenya) 131",
-      "lang": "sw",
-      "standing": "press",
-      "hl": "sw",
-      "gl": "KE",
-      "ceid": "KE:sw",
-      "query": "\"mail ballot\" rejected OR \"postal vote\" restricted OR \"drop box\""
-    },
-    {
-      "label": "Swahili (Kenya) 132",
-      "lang": "sw",
-      "standing": "press",
-      "hl": "sw",
-      "gl": "KE",
-      "ceid": "KE:sw",
-      "query": "disenfranchisement OR \"felony voting\" OR \"prisoner voting\" ruling"
-    },
-    {
-      "label": "Amharic (Ethiopia) 133",
-      "lang": "am",
-      "standing": "press",
-      "hl": "am",
-      "gl": "ET",
-      "ceid": "ET:am",
-      "query": "\"election observation\" mission OR observer report OR \"electoral integrity\""
-    },
-    {
-      "label": "Amharic (Ethiopia) 134",
-      "lang": "am",
-      "standing": "press",
-      "hl": "am",
-      "gl": "ET",
-      "ceid": "ET:am",
-      "query": "\"electoral commission\" bias OR partisan OR \"returning officer\" dispute"
-    },
-    {
-      "label": "Amharic (Ethiopia) 135",
-      "lang": "am",
-      "standing": "press",
-      "hl": "am",
-      "gl": "ET",
-      "ceid": "ET:am",
-      "query": "\"opposition banned\" OR \"opposition leader jailed\" OR candidate disqualified"
-    },
-    {
-      "label": "Hausa (Nigeria) 136",
-      "lang": "ha",
-      "standing": "press",
-      "hl": "ha",
-      "gl": "NG",
-      "ceid": "NG:ha",
-      "query": "\"internet shutdown\" election OR journalist arrested election OR state media bias"
-    },
-    {
-      "label": "Hausa (Nigeria) 137",
-      "lang": "ha",
-      "standing": "press",
-      "hl": "ha",
-      "gl": "NG",
-      "ceid": "NG:ha",
-      "query": "\"super pac\" OR \"outside spending\" OR \"independent expenditure\""
-    },
-    {
-      "label": "Hausa (Nigeria) 138",
-      "lang": "ha",
-      "standing": "press",
-      "hl": "ha",
-      "gl": "NG",
-      "ceid": "NG:ha",
-      "query": "\"political advertising\" spending OR microtargeting OR deepfake election"
-    }
-  ],
-  "events": [
-    {
-      "label": "Election observation missions",
-      "lang": "en",
-      "standing": "official",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"election observation\" OSCE OR ODIHR OR \"Carter Center\" OR \"European Union election observation\" report"
-    },
-    {
-      "label": "Court rulings on elections",
-      "lang": "en",
-      "standing": "official",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "court ruling election OR \"constitutional court\" vote annulled OR \"supreme court\" voting rights"
-    },
-    {
-      "label": "Electoral commission decisions",
-      "lang": "en",
-      "standing": "official",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"electoral commission\" ruling OR decision OR candidate disqualified OR register audit"
-    },
-    {
-      "label": "Prosecutions for electoral crime",
-      "lang": "en",
-      "standing": "official",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "charged electoral fraud OR convicted vote buying OR sentenced ballot stuffing"
-    },
-    {
-      "label": "Campaign finance enforcement",
-      "lang": "en",
-      "standing": "official",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"campaign finance\" violation OR fine OR investigation OR disclosure failure"
-    },
-    {
-      "label": "Foreign interference findings",
-      "lang": "en",
-      "standing": "official",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "intelligence assessment election interference OR foreign influence operation attributed"
-    },
-    {
-      "label": "Electoral integrity indices",
-      "lang": "en",
-      "standing": "research",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"Electoral Integrity Project\" OR V-Dem report OR \"democracy index\" election quality"
-    },
-    {
-      "label": "Money in politics research",
-      "lang": "en",
-      "standing": "research",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "OpenSecrets OR \"money and elections\" study OR \"outside spending\" analysis"
-    },
-    {
-      "label": "Vote buying research",
-      "lang": "en",
-      "standing": "research",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"vote buying\" survey OR Afrobarometer voting incentive OR clientelism study"
-    },
-    {
-      "label": "Electoral violence tracking",
-      "lang": "en",
-      "standing": "research",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"electoral violence\" data OR ACLED election OR political violence tracker"
-    },
-    {
-      "label": "Voting rights litigation",
-      "lang": "en",
-      "standing": "rights",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"voting rights\" lawsuit OR redistricting challenge OR \"Voting Rights Act\" case"
-    },
-    {
-      "label": "Disinformation monitoring",
-      "lang": "en",
-      "standing": "rights",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "election disinformation report OR platform political ads policy OR deepfake voters"
-    },
-    {
-      "label": "Registration and access campaigns",
-      "lang": "en",
-      "standing": "rights",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"registration drive\" OR \"automatic voter registration\" OR polling access campaign"
-    },
-    {
-      "label": "Transparency and lobbying",
-      "lang": "en",
-      "standing": "rights",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"lobbying register\" OR \"transparency register\" OR beneficial ownership political donation"
-    },
-    {
-      "label": "Opposition and civic space",
-      "lang": "en",
-      "standing": "rights",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "opposition leader arrested OR party deregistered OR civic space election crackdown"
-    },
-    {
-      "label": "Internet shutdowns",
-      "lang": "en",
-      "standing": "rights",
-      "hl": "en-US",
-      "gl": "US",
-      "ceid": "US:en",
-      "query": "\"internet shutdown\" election OR social media blocked vote OR connectivity restricted polls"
-    }
-  ]
+ "_note": [
+  "Sources for the voter wire.",
+  "",
+  "direct: feeds proven working in the sibling Welcome to Your Galaxy repos.",
+  "  Nothing invented — an untested feed URL reports itself unreachable on every",
+  "  harvest and quietly makes the coverage figure a lie.",
+  "",
+  "gnews: Google News locale searches; the harvester builds the URL from",
+  "  hl / gl / ceid. Twenty-four queries rotate across 46 locales.",
+  "",
+  "events: subject searches for observer missions, rulings, enforcement and the",
+  "  recurring integrity indices.",
+  "",
+  "standing is provenance, not importance:",
+  "  official  electoral commissions, courts, prosecutors, observer missions",
+  "  research  election monitoring, integrity indices, money-in-politics research",
+  "  press     general news across the locales",
+  "  rights    transparency and voting rights organisations",
+  "",
+  "Worth adding, with URLs you have opened: International IDEA, the Electoral",
+  "Integrity Project, OSCE/ODIHR, the Carter Center, NDI, IFES, ACE Project,",
+  "OpenSecrets, ACLED and the Brennan Center."
+ ],
+ "direct": [
+  {
+   "name": "OHCHR — news",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.ohchr.org/en/rss/news"
+  },
+  {
+   "name": "UN News — Human Rights",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://news.un.org/feed/subscribe/en/news/topic/human-rights/feed/rss.xml"
+  },
+  {
+   "name": "UN Special Procedures",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.ohchr.org/en/rss/special-procedures"
+  },
+  {
+   "name": "European Court of Human Rights",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.echr.coe.int/rss"
+  },
+  {
+   "name": "Inter-American Commission on Human Rights",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.oas.org/en/iachr/rss/rss_pr.xml"
+  },
+  {
+   "name": "US Department of Justice",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.justice.gov/feeds/opa/justice-news.xml"
+  },
+  {
+   "name": "Europol",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.europol.europa.eu/rss.xml"
+  },
+  {
+   "name": "European Commission",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://ec.europa.eu/commission/presscorner/api/rss"
+  },
+  {
+   "name": "Freedom House",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://freedomhouse.org/rss.xml"
+  },
+  {
+   "name": "CIVICUS Monitor",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://monitor.civicus.org/feed/"
+  },
+  {
+   "name": "Human Rights Watch",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.hrw.org/rss/news"
+  },
+  {
+   "name": "Amnesty International",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.amnesty.org/en/rss/"
+  },
+  {
+   "name": "Bellingcat",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.bellingcat.com/feed/"
+  },
+  {
+   "name": "Peterson Institute",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.piie.com/rss.xml"
+  },
+  {
+   "name": "CEPR",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://cepr.org/rss.xml"
+  },
+  {
+   "name": "ODI",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://odi.org/en/feed/"
+  },
+  {
+   "name": "Transparency International",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.transparency.org/en/rss"
+  },
+  {
+   "name": "Global Witness",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.globalwitness.org/en/rss/"
+  },
+  {
+   "name": "Corporate Europe Observatory",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://corporateeurope.org/en/rss.xml"
+  },
+  {
+   "name": "Public Citizen · Global Trade Watch",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.citizen.org/feed/"
+  },
+  {
+   "name": "Statewatch",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.statewatch.org/rss/"
+  },
+  {
+   "name": "Article 19",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.article19.org/feed/"
+  },
+  {
+   "name": "Access Now",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.accessnow.org/feed/"
+  },
+  {
+   "name": "EDRi",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://edri.org/feed/"
+  },
+  {
+   "name": "Privacy International",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://privacyinternational.org/rss.xml"
+  },
+  {
+   "name": "Front Line Defenders",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.frontlinedefenders.org/rss.xml"
+  },
+  {
+   "name": "Financial Transparency Coalition",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://financialtransparency.org/feed/"
+  },
+  {
+   "name": "The Marshall Project",
+   "lang": "en",
+   "standing": "press",
+   "url": "https://www.themarshallproject.org/rss/recent.rss"
+  },
+  {
+   "name": "The Intercept",
+   "lang": "en",
+   "standing": "press",
+   "url": "https://theintercept.com/feed/?rss"
+  }
+ ],
+ "gnews": [
+  {
+   "label": "English (US) · suppression",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "suppression",
+   "query": "voter suppression claims OR polling stations closed OR voter ID law challenge"
+  },
+  {
+   "label": "English (US) · rolls",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "rolls",
+   "query": "voter roll purge OR electoral register removed names OR voter registration deadline cut"
+  },
+  {
+   "label": "English (US) · darkmoney",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "darkmoney",
+   "query": "dark money election spending OR undisclosed donors campaign OR shell company political donation"
+  },
+  {
+   "label": "English (US) · disinformation",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "disinformation",
+   "query": "election disinformation campaign OR deepfake candidate video OR false claims about voting"
+  },
+  {
+   "label": "English (US) · votebuying",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "votebuying",
+   "query": "vote buying arrests OR cash for votes investigation OR electoral bribery case"
+  },
+  {
+   "label": "English (US) · violence",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "violence",
+   "query": "election violence attacks OR candidate killed campaign OR polling day clashes"
+  },
+  {
+   "label": "English (UK) · suppression",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en",
+   "theme": "suppression",
+   "query": "voter suppression claims OR polling stations closed OR voter ID law challenge"
+  },
+  {
+   "label": "English (UK) · rolls",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en",
+   "theme": "rolls",
+   "query": "voter roll purge OR electoral register removed names OR voter registration deadline cut"
+  },
+  {
+   "label": "English (UK) · darkmoney",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en",
+   "theme": "darkmoney",
+   "query": "dark money election spending OR undisclosed donors campaign OR shell company political donation"
+  },
+  {
+   "label": "English (UK) · disinformation",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en",
+   "theme": "disinformation",
+   "query": "election disinformation campaign OR deepfake candidate video OR false claims about voting"
+  },
+  {
+   "label": "English (UK) · votebuying",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en",
+   "theme": "votebuying",
+   "query": "vote buying arrests OR cash for votes investigation OR electoral bribery case"
+  },
+  {
+   "label": "English (UK) · violence",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en",
+   "theme": "violence",
+   "query": "election violence attacks OR candidate killed campaign OR polling day clashes"
+  },
+  {
+   "label": "English (India) · suppression",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "theme": "suppression",
+   "query": "voter suppression claims OR polling stations closed OR voter ID law challenge"
+  },
+  {
+   "label": "English (India) · rolls",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "theme": "rolls",
+   "query": "voter roll purge OR electoral register removed names OR voter registration deadline cut"
+  },
+  {
+   "label": "English (India) · darkmoney",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "theme": "darkmoney",
+   "query": "dark money election spending OR undisclosed donors campaign OR shell company political donation"
+  },
+  {
+   "label": "English (India) · disinformation",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "theme": "disinformation",
+   "query": "election disinformation campaign OR deepfake candidate video OR false claims about voting"
+  },
+  {
+   "label": "English (India) · votebuying",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "theme": "votebuying",
+   "query": "vote buying arrests OR cash for votes investigation OR electoral bribery case"
+  },
+  {
+   "label": "English (India) · violence",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "theme": "violence",
+   "query": "election violence attacks OR candidate killed campaign OR polling day clashes"
+  },
+  {
+   "label": "English (Nigeria) · suppression",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "theme": "suppression",
+   "query": "voter suppression claims OR polling stations closed OR voter ID law challenge"
+  },
+  {
+   "label": "English (Nigeria) · rolls",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "theme": "rolls",
+   "query": "voter roll purge OR electoral register removed names OR voter registration deadline cut"
+  },
+  {
+   "label": "English (Nigeria) · darkmoney",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "theme": "darkmoney",
+   "query": "dark money election spending OR undisclosed donors campaign OR shell company political donation"
+  },
+  {
+   "label": "English (Nigeria) · disinformation",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "theme": "disinformation",
+   "query": "election disinformation campaign OR deepfake candidate video OR false claims about voting"
+  },
+  {
+   "label": "English (Nigeria) · votebuying",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "theme": "votebuying",
+   "query": "vote buying arrests OR cash for votes investigation OR electoral bribery case"
+  },
+  {
+   "label": "English (Nigeria) · violence",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "theme": "violence",
+   "query": "election violence attacks OR candidate killed campaign OR polling day clashes"
+  },
+  {
+   "label": "English (Australia) · suppression",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "theme": "suppression",
+   "query": "voter suppression claims OR polling stations closed OR voter ID law challenge"
+  },
+  {
+   "label": "English (Australia) · rolls",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "theme": "rolls",
+   "query": "voter roll purge OR electoral register removed names OR voter registration deadline cut"
+  },
+  {
+   "label": "English (Australia) · darkmoney",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "theme": "darkmoney",
+   "query": "dark money election spending OR undisclosed donors campaign OR shell company political donation"
+  },
+  {
+   "label": "English (Australia) · disinformation",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "theme": "disinformation",
+   "query": "election disinformation campaign OR deepfake candidate video OR false claims about voting"
+  },
+  {
+   "label": "English (Australia) · votebuying",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "theme": "votebuying",
+   "query": "vote buying arrests OR cash for votes investigation OR electoral bribery case"
+  },
+  {
+   "label": "English (Australia) · violence",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "theme": "violence",
+   "query": "election violence attacks OR candidate killed campaign OR polling day clashes"
+  },
+  {
+   "label": "English (South Africa) · suppression",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "theme": "suppression",
+   "query": "voter suppression claims OR polling stations closed OR voter ID law challenge"
+  },
+  {
+   "label": "English (South Africa) · rolls",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "theme": "rolls",
+   "query": "voter roll purge OR electoral register removed names OR voter registration deadline cut"
+  },
+  {
+   "label": "English (South Africa) · darkmoney",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "theme": "darkmoney",
+   "query": "dark money election spending OR undisclosed donors campaign OR shell company political donation"
+  },
+  {
+   "label": "English (South Africa) · disinformation",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "theme": "disinformation",
+   "query": "election disinformation campaign OR deepfake candidate video OR false claims about voting"
+  },
+  {
+   "label": "English (South Africa) · votebuying",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "theme": "votebuying",
+   "query": "vote buying arrests OR cash for votes investigation OR electoral bribery case"
+  },
+  {
+   "label": "English (South Africa) · violence",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "theme": "violence",
+   "query": "election violence attacks OR candidate killed campaign OR polling day clashes"
+  },
+  {
+   "label": "Español (España) · suppression",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "suppression",
+   "query": "supresión de votantes OR cierre de colegios electorales OR ley de identificación del votante"
+  },
+  {
+   "label": "Español (España) · rolls",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "rolls",
+   "query": "depuración del padrón electoral OR eliminación de nombres del censo"
+  },
+  {
+   "label": "Español (España) · darkmoney",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "darkmoney",
+   "query": "dinero opaco en campañas OR donantes no revelados OR sociedad pantalla donación política"
+  },
+  {
+   "label": "Español (España) · disinformation",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "disinformation",
+   "query": "desinformación electoral OR vídeo deepfake de candidato OR bulos sobre el voto"
+  },
+  {
+   "label": "Español (España) · votebuying",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "votebuying",
+   "query": "compra de votos detenciones OR dinero por votos investigación"
+  },
+  {
+   "label": "Español (España) · violence",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "violence",
+   "query": "violencia electoral ataques OR candidato asesinado campaña OR enfrentamientos jornada electoral"
+  },
+  {
+   "label": "Español (México) · suppression",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "theme": "suppression",
+   "query": "supresión de votantes OR cierre de colegios electorales OR ley de identificación del votante"
+  },
+  {
+   "label": "Español (México) · rolls",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "theme": "rolls",
+   "query": "depuración del padrón electoral OR eliminación de nombres del censo"
+  },
+  {
+   "label": "Español (México) · darkmoney",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "theme": "darkmoney",
+   "query": "dinero opaco en campañas OR donantes no revelados OR sociedad pantalla donación política"
+  },
+  {
+   "label": "Español (México) · disinformation",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "theme": "disinformation",
+   "query": "desinformación electoral OR vídeo deepfake de candidato OR bulos sobre el voto"
+  },
+  {
+   "label": "Español (México) · votebuying",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "theme": "votebuying",
+   "query": "compra de votos detenciones OR dinero por votos investigación"
+  },
+  {
+   "label": "Español (México) · violence",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "theme": "violence",
+   "query": "violencia electoral ataques OR candidato asesinado campaña OR enfrentamientos jornada electoral"
+  },
+  {
+   "label": "Español (Argentina) · suppression",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "theme": "suppression",
+   "query": "supresión de votantes OR cierre de colegios electorales OR ley de identificación del votante"
+  },
+  {
+   "label": "Español (Argentina) · rolls",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "theme": "rolls",
+   "query": "depuración del padrón electoral OR eliminación de nombres del censo"
+  },
+  {
+   "label": "Español (Argentina) · darkmoney",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "theme": "darkmoney",
+   "query": "dinero opaco en campañas OR donantes no revelados OR sociedad pantalla donación política"
+  },
+  {
+   "label": "Español (Argentina) · disinformation",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "theme": "disinformation",
+   "query": "desinformación electoral OR vídeo deepfake de candidato OR bulos sobre el voto"
+  },
+  {
+   "label": "Español (Argentina) · votebuying",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "theme": "votebuying",
+   "query": "compra de votos detenciones OR dinero por votos investigación"
+  },
+  {
+   "label": "Español (Argentina) · violence",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "theme": "violence",
+   "query": "violencia electoral ataques OR candidato asesinado campaña OR enfrentamientos jornada electoral"
+  },
+  {
+   "label": "Português (Brasil) · suppression",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "suppression",
+   "query": "supressão de eleitores OR encerramento de mesas de voto OR lei de identificação do eleitor"
+  },
+  {
+   "label": "Português (Brasil) · rolls",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "rolls",
+   "query": "expurgo do caderno eleitoral OR remoção de nomes do recenseamento"
+  },
+  {
+   "label": "Português (Brasil) · darkmoney",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "darkmoney",
+   "query": "dinheiro opaco em campanhas OR doadores não revelados OR empresa de fachada doação política"
+  },
+  {
+   "label": "Português (Brasil) · disinformation",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "disinformation",
+   "query": "desinformação eleitoral OR vídeo deepfake de candidato OR boatos sobre a votação"
+  },
+  {
+   "label": "Português (Brasil) · votebuying",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "votebuying",
+   "query": "compra de votos detenções OR dinheiro por votos investigação"
+  },
+  {
+   "label": "Português (Brasil) · violence",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "violence",
+   "query": "violência eleitoral ataques OR candidato assassinado campanha"
+  },
+  {
+   "label": "Português (Portugal) · suppression",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "theme": "suppression",
+   "query": "supressão de eleitores OR encerramento de mesas de voto OR lei de identificação do eleitor"
+  },
+  {
+   "label": "Português (Portugal) · rolls",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "theme": "rolls",
+   "query": "expurgo do caderno eleitoral OR remoção de nomes do recenseamento"
+  },
+  {
+   "label": "Português (Portugal) · darkmoney",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "theme": "darkmoney",
+   "query": "dinheiro opaco em campanhas OR doadores não revelados OR empresa de fachada doação política"
+  },
+  {
+   "label": "Português (Portugal) · disinformation",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "theme": "disinformation",
+   "query": "desinformação eleitoral OR vídeo deepfake de candidato OR boatos sobre a votação"
+  },
+  {
+   "label": "Português (Portugal) · votebuying",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "theme": "votebuying",
+   "query": "compra de votos detenções OR dinheiro por votos investigação"
+  },
+  {
+   "label": "Português (Portugal) · violence",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "theme": "violence",
+   "query": "violência eleitoral ataques OR candidato assassinado campanha"
+  },
+  {
+   "label": "Français · suppression",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "suppression",
+   "query": "entraves au vote OR fermeture de bureaux de vote OR loi sur l'identification des électeurs"
+  },
+  {
+   "label": "Français · rolls",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "rolls",
+   "query": "radiation des listes électorales OR suppression de noms du registre"
+  },
+  {
+   "label": "Français · darkmoney",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "darkmoney",
+   "query": "financement opaque de campagne OR donateurs non divulgués OR société écran don politique"
+  },
+  {
+   "label": "Français · disinformation",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "disinformation",
+   "query": "désinformation électorale OR deepfake de candidat OR fausses informations sur le vote"
+  },
+  {
+   "label": "Français · votebuying",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "votebuying",
+   "query": "achat de voix arrestations OR argent contre votes enquête"
+  },
+  {
+   "label": "Français · violence",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "violence",
+   "query": "violences électorales attaques OR candidat tué campagne"
+  },
+  {
+   "label": "Français (Canada) · suppression",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "theme": "suppression",
+   "query": "entraves au vote OR fermeture de bureaux de vote OR loi sur l'identification des électeurs"
+  },
+  {
+   "label": "Français (Canada) · rolls",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "theme": "rolls",
+   "query": "radiation des listes électorales OR suppression de noms du registre"
+  },
+  {
+   "label": "Français (Canada) · darkmoney",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "theme": "darkmoney",
+   "query": "financement opaque de campagne OR donateurs non divulgués OR société écran don politique"
+  },
+  {
+   "label": "Français (Canada) · disinformation",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "theme": "disinformation",
+   "query": "désinformation électorale OR deepfake de candidat OR fausses informations sur le vote"
+  },
+  {
+   "label": "Français (Canada) · votebuying",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "theme": "votebuying",
+   "query": "achat de voix arrestations OR argent contre votes enquête"
+  },
+  {
+   "label": "Français (Canada) · violence",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "theme": "violence",
+   "query": "violences électorales attaques OR candidat tué campagne"
+  },
+  {
+   "label": "Deutsch · suppression",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "suppression",
+   "query": "Behinderung der Stimmabgabe OR Schließung von Wahllokalen OR Wählerausweispflicht"
+  },
+  {
+   "label": "Deutsch · rolls",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "rolls",
+   "query": "Streichung aus dem Wählerverzeichnis OR Bereinigung der Wählerlisten"
+  },
+  {
+   "label": "Deutsch · darkmoney",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "darkmoney",
+   "query": "undurchsichtige Wahlkampffinanzierung OR nicht offengelegte Spender OR Briefkastenfirma Parteispende"
+  },
+  {
+   "label": "Deutsch · disinformation",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "disinformation",
+   "query": "Wahldesinformation OR Deepfake Kandidat OR Falschbehauptungen über die Wahl"
+  },
+  {
+   "label": "Deutsch · votebuying",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "votebuying",
+   "query": "Stimmenkauf Festnahmen OR Wahlbestechung Ermittlungen"
+  },
+  {
+   "label": "Deutsch · violence",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "violence",
+   "query": "Wahlgewalt Angriffe OR Kandidat getötet Wahlkampf"
+  },
+  {
+   "label": "Italiano · suppression",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "suppression",
+   "query": "ostacoli al voto OR chiusura di seggi elettorali OR legge sull'identificazione degli elettori"
+  },
+  {
+   "label": "Italiano · rolls",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "rolls",
+   "query": "cancellazione dalle liste elettorali OR pulizia delle liste"
+  },
+  {
+   "label": "Italiano · darkmoney",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "darkmoney",
+   "query": "finanziamenti opachi alle campagne OR donatori non dichiarati"
+  },
+  {
+   "label": "Italiano · disinformation",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "disinformation",
+   "query": "disinformazione elettorale OR deepfake di candidato OR false informazioni sul voto"
+  },
+  {
+   "label": "Italiano · votebuying",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "votebuying",
+   "query": "compravendita di voti arresti OR corruzione elettorale indagine"
+  },
+  {
+   "label": "Polski · suppression",
+   "lang": "pl",
+   "standing": "press",
+   "hl": "pl",
+   "gl": "PL",
+   "ceid": "PL:pl",
+   "theme": "suppression",
+   "query": "utrudnianie głosowania OR zamykanie lokali wyborczych"
+  },
+  {
+   "label": "Polski · disinformation",
+   "lang": "pl",
+   "standing": "press",
+   "hl": "pl",
+   "gl": "PL",
+   "ceid": "PL:pl",
+   "theme": "disinformation",
+   "query": "dezinformacja wyborcza OR deepfake kandydata"
+  },
+  {
+   "label": "Русский · suppression",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "suppression",
+   "query": "препятствия голосованию OR закрытие избирательных участков"
+  },
+  {
+   "label": "Русский · rolls",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "rolls",
+   "query": "чистка списков избирателей OR исключение из реестра избирателей"
+  },
+  {
+   "label": "Русский · darkmoney",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "darkmoney",
+   "query": "непрозрачное финансирование кампаний OR нераскрытые доноры"
+  },
+  {
+   "label": "Русский · disinformation",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "disinformation",
+   "query": "предвыборная дезинформация OR дипфейк кандидата"
+  },
+  {
+   "label": "Русский · votebuying",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "votebuying",
+   "query": "подкуп избирателей задержания OR покупка голосов расследование"
+  },
+  {
+   "label": "Русский · violence",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "violence",
+   "query": "предвыборное насилие нападения OR убийство кандидата"
+  },
+  {
+   "label": "Українська · suppression",
+   "lang": "uk",
+   "standing": "press",
+   "hl": "uk",
+   "gl": "UA",
+   "ceid": "UA:uk",
+   "theme": "suppression",
+   "query": "перешкоджання голосуванню OR закриття виборчих дільниць"
+  },
+  {
+   "label": "Українська · rolls",
+   "lang": "uk",
+   "standing": "press",
+   "hl": "uk",
+   "gl": "UA",
+   "ceid": "UA:uk",
+   "theme": "rolls",
+   "query": "чистка списків виборців"
+  },
+  {
+   "label": "Українська · disinformation",
+   "lang": "uk",
+   "standing": "press",
+   "hl": "uk",
+   "gl": "UA",
+   "ceid": "UA:uk",
+   "theme": "disinformation",
+   "query": "передвиборча дезінформація OR дипфейк кандидата"
+  },
+  {
+   "label": "Türkçe · suppression",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "theme": "suppression",
+   "query": "oy vermenin engellenmesi OR sandık kapatma OR seçmen kimlik yasası"
+  },
+  {
+   "label": "Türkçe · rolls",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "theme": "rolls",
+   "query": "seçmen listesinden silme OR seçmen kütüğü temizliği"
+  },
+  {
+   "label": "Türkçe · darkmoney",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "theme": "darkmoney",
+   "query": "kampanya finansmanında şeffaflık eksikliği OR açıklanmayan bağışçılar"
+  },
+  {
+   "label": "Türkçe · disinformation",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "theme": "disinformation",
+   "query": "seçim dezenformasyonu OR aday deepfake videosu"
+  },
+  {
+   "label": "Türkçe · votebuying",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "theme": "votebuying",
+   "query": "oy satın alma gözaltı OR seçim rüşveti soruşturma"
+  },
+  {
+   "label": "Türkçe · violence",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "theme": "violence",
+   "query": "seçim şiddeti saldırılar OR aday öldürüldü"
+  },
+  {
+   "label": "Bahasa Indonesia · suppression",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "theme": "suppression",
+   "query": "penghambatan pemilih OR penutupan tempat pemungutan suara"
+  },
+  {
+   "label": "Bahasa Indonesia · rolls",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "theme": "rolls",
+   "query": "pencoretan daftar pemilih OR pembersihan daftar pemilih"
+  },
+  {
+   "label": "Bahasa Indonesia · darkmoney",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "theme": "darkmoney",
+   "query": "dana kampanye gelap OR donatur tidak diungkap"
+  },
+  {
+   "label": "Bahasa Indonesia · disinformation",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "theme": "disinformation",
+   "query": "disinformasi pemilu OR video deepfake kandidat"
+  },
+  {
+   "label": "Bahasa Indonesia · votebuying",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "theme": "votebuying",
+   "query": "politik uang penangkapan OR jual beli suara penyelidikan"
+  },
+  {
+   "label": "Bahasa Indonesia · violence",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "theme": "violence",
+   "query": "kekerasan pemilu serangan OR calon dibunuh kampanye"
+  },
+  {
+   "label": "Tiếng Việt · disinformation",
+   "lang": "vi",
+   "standing": "press",
+   "hl": "vi",
+   "gl": "VN",
+   "ceid": "VN:vi",
+   "theme": "disinformation",
+   "query": "thông tin sai lệch bầu cử OR video deepfake ứng viên"
+  },
+  {
+   "label": "Tiếng Việt · votebuying",
+   "lang": "vi",
+   "standing": "press",
+   "hl": "vi",
+   "gl": "VN",
+   "ceid": "VN:vi",
+   "theme": "votebuying",
+   "query": "mua phiếu bầu bắt giữ OR hối lộ bầu cử điều tra"
+  },
+  {
+   "label": "ไทย · disinformation",
+   "lang": "th",
+   "standing": "press",
+   "hl": "th",
+   "gl": "TH",
+   "ceid": "TH:th",
+   "theme": "disinformation",
+   "query": "ข้อมูลบิดเบือนเลือกตั้ง OR วิดีโอ deepfake ผู้สมัคร"
+  },
+  {
+   "label": "ไทย · votebuying",
+   "lang": "th",
+   "standing": "press",
+   "hl": "th",
+   "gl": "TH",
+   "ceid": "TH:th",
+   "theme": "votebuying",
+   "query": "ซื้อเสียง จับกุม OR ทุจริตเลือกตั้ง สอบสวน"
+  },
+  {
+   "label": "日本語 · suppression",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "suppression",
+   "query": "投票 妨害 OR 投票所 削減 OR 有権者 身分証 法案"
+  },
+  {
+   "label": "日本語 · rolls",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "rolls",
+   "query": "選挙人名簿 抹消 OR 有権者名簿 削除"
+  },
+  {
+   "label": "日本語 · darkmoney",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "darkmoney",
+   "query": "不透明な選挙資金 OR 献金者 非公開"
+  },
+  {
+   "label": "日本語 · disinformation",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "disinformation",
+   "query": "選挙 偽情報 OR 候補者 ディープフェイク"
+  },
+  {
+   "label": "日本語 · votebuying",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "votebuying",
+   "query": "買収 選挙 逮捕 OR 票の買収 捜査"
+  },
+  {
+   "label": "한국어 · suppression",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "suppression",
+   "query": "투표 방해 OR 투표소 축소 OR 유권자 신분증 법"
+  },
+  {
+   "label": "한국어 · rolls",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "rolls",
+   "query": "선거인명부 삭제 OR 유권자 명부 정리"
+  },
+  {
+   "label": "한국어 · darkmoney",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "darkmoney",
+   "query": "불투명 선거자금 OR 미공개 후원자"
+  },
+  {
+   "label": "한국어 · disinformation",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "disinformation",
+   "query": "선거 허위정보 OR 후보 딥페이크"
+  },
+  {
+   "label": "한국어 · votebuying",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "votebuying",
+   "query": "금품 선거 적발 OR 표 매수 수사"
+  },
+  {
+   "label": "中文 (台灣) · suppression",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "suppression",
+   "query": "壓制選民 OR 投票站 關閉 OR 選民身份證 法律"
+  },
+  {
+   "label": "中文 (台灣) · rolls",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "rolls",
+   "query": "選民名冊 清理 OR 選民登記 剔除"
+  },
+  {
+   "label": "中文 (台灣) · darkmoney",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "darkmoney",
+   "query": "暗錢 選舉資金 OR 未披露 捐款人"
+  },
+  {
+   "label": "中文 (台灣) · disinformation",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "disinformation",
+   "query": "選舉 虛假資訊 OR 候選人 深度偽造"
+  },
+  {
+   "label": "中文 (台灣) · votebuying",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "votebuying",
+   "query": "賄選 抓捕 OR 買票 調查"
+  },
+  {
+   "label": "中文 (香港) · suppression",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-HK",
+   "gl": "HK",
+   "ceid": "HK:zh-Hant",
+   "theme": "suppression",
+   "query": "壓制選民 OR 投票站 關閉 OR 選民身份證 法律"
+  },
+  {
+   "label": "中文 (香港) · rolls",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-HK",
+   "gl": "HK",
+   "ceid": "HK:zh-Hant",
+   "theme": "rolls",
+   "query": "選民名冊 清理 OR 選民登記 剔除"
+  },
+  {
+   "label": "中文 (香港) · darkmoney",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-HK",
+   "gl": "HK",
+   "ceid": "HK:zh-Hant",
+   "theme": "darkmoney",
+   "query": "暗錢 選舉資金 OR 未披露 捐款人"
+  },
+  {
+   "label": "中文 (香港) · disinformation",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-HK",
+   "gl": "HK",
+   "ceid": "HK:zh-Hant",
+   "theme": "disinformation",
+   "query": "選舉 虛假信息 OR 候選人 深度偽造"
+  },
+  {
+   "label": "中文 (香港) · votebuying",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-HK",
+   "gl": "HK",
+   "ceid": "HK:zh-Hant",
+   "theme": "votebuying",
+   "query": "賄選 抓捕 OR 買票 調查"
+  },
+  {
+   "label": "हिन्दी · suppression",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "theme": "suppression",
+   "query": "मतदाता दमन OR मतदान केंद्र बंद"
+  },
+  {
+   "label": "हिन्दी · rolls",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "theme": "rolls",
+   "query": "मतदाता सूची से नाम हटाए"
+  },
+  {
+   "label": "हिन्दी · disinformation",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "theme": "disinformation",
+   "query": "चुनावी दुष्प्रचार OR उम्मीदवार डीपफेक"
+  },
+  {
+   "label": "हिन्दी · votebuying",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "theme": "votebuying",
+   "query": "वोट खरीद गिरफ्तार OR चुनावी रिश्वत जांच"
+  },
+  {
+   "label": "हिन्दी · violence",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "theme": "violence",
+   "query": "चुनावी हिंसा हमले OR उम्मीदवार की हत्या"
+  },
+  {
+   "label": "العربية (مصر) · suppression",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "theme": "suppression",
+   "query": "قمع الناخبين OR إغلاق مراكز الاقتراع"
+  },
+  {
+   "label": "العربية (مصر) · rolls",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "theme": "rolls",
+   "query": "شطب من سجل الناخبين"
+  },
+  {
+   "label": "العربية (مصر) · disinformation",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "theme": "disinformation",
+   "query": "تضليل انتخابي OR فيديو مزيف لمرشح"
+  },
+  {
+   "label": "العربية (مصر) · votebuying",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "theme": "votebuying",
+   "query": "شراء الأصوات اعتقالات OR رشوة انتخابية تحقيق"
+  },
+  {
+   "label": "العربية (مصر) · violence",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "theme": "violence",
+   "query": "عنف انتخابي هجمات OR اغتيال مرشح"
+  },
+  {
+   "label": "العربية (الإمارات) · suppression",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "AE",
+   "ceid": "AE:ar",
+   "theme": "suppression",
+   "query": "قمع الناخبين OR إغلاق مراكز الاقتراع"
+  },
+  {
+   "label": "العربية (الإمارات) · rolls",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "AE",
+   "ceid": "AE:ar",
+   "theme": "rolls",
+   "query": "شطب من سجل الناخبين"
+  },
+  {
+   "label": "العربية (الإمارات) · disinformation",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "AE",
+   "ceid": "AE:ar",
+   "theme": "disinformation",
+   "query": "تضليل انتخابي OR فيديو مزيف لمرشح"
+  },
+  {
+   "label": "العربية (الإمارات) · votebuying",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "AE",
+   "ceid": "AE:ar",
+   "theme": "votebuying",
+   "query": "شراء الأصوات اعتقالات OR رشوة انتخابية تحقيق"
+  },
+  {
+   "label": "العربية (الإمارات) · violence",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "AE",
+   "ceid": "AE:ar",
+   "theme": "violence",
+   "query": "عنف انتخابي هجمات OR اغتيال مرشح"
+  },
+  {
+   "label": "Ελληνικά · suppression",
+   "lang": "el",
+   "standing": "press",
+   "hl": "el",
+   "gl": "GR",
+   "ceid": "GR:el",
+   "theme": "suppression",
+   "query": "παρεμπόδιση ψηφοφορίας OR κλείσιμο εκλογικών τμημάτων"
+  },
+  {
+   "label": "Ελληνικά · darkmoney",
+   "lang": "el",
+   "standing": "press",
+   "hl": "el",
+   "gl": "GR",
+   "ceid": "GR:el",
+   "theme": "darkmoney",
+   "query": "αδιαφανής χρηματοδότηση εκστρατείας"
+  },
+  {
+   "label": "Ελληνικά · disinformation",
+   "lang": "el",
+   "standing": "press",
+   "hl": "el",
+   "gl": "GR",
+   "ceid": "GR:el",
+   "theme": "disinformation",
+   "query": "εκλογική παραπληροφόρηση OR deepfake υποψηφίου"
+  },
+  {
+   "label": "Svenska · suppression",
+   "lang": "sv",
+   "standing": "press",
+   "hl": "sv",
+   "gl": "SE",
+   "ceid": "SE:sv",
+   "theme": "suppression",
+   "query": "hinder för att rösta OR nedlagda vallokaler"
+  },
+  {
+   "label": "Kiswahili · violence",
+   "lang": "sw",
+   "standing": "press",
+   "hl": "sw",
+   "gl": "KE",
+   "ceid": "KE:sw",
+   "theme": "violence",
+   "query": "vurugu za uchaguzi mashambulizi"
+  }
+ ],
+ "events": [
+  {
+   "label": "Election observation missions",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"election observation\" OSCE OR ODIHR OR \"Carter Center\" OR \"European Union election observation\" report"
+  },
+  {
+   "label": "Court rulings on elections",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "court ruling election OR \"constitutional court\" vote annulled OR \"supreme court\" voting rights"
+  },
+  {
+   "label": "Electoral commission decisions",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"electoral commission\" ruling OR decision OR candidate disqualified OR register audit"
+  },
+  {
+   "label": "Prosecutions for electoral crime",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "charged electoral fraud OR convicted vote buying OR sentenced ballot stuffing"
+  },
+  {
+   "label": "Campaign finance enforcement",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"campaign finance\" violation OR fine OR investigation OR disclosure failure"
+  },
+  {
+   "label": "Foreign interference findings",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "intelligence assessment election interference OR foreign influence operation attributed"
+  },
+  {
+   "label": "Electoral integrity indices",
+   "lang": "en",
+   "standing": "research",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"Electoral Integrity Project\" OR V-Dem report OR \"democracy index\" election quality"
+  },
+  {
+   "label": "Money in politics research",
+   "lang": "en",
+   "standing": "research",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "OpenSecrets OR \"money and elections\" study OR \"outside spending\" analysis"
+  },
+  {
+   "label": "Vote buying research",
+   "lang": "en",
+   "standing": "research",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"vote buying\" survey OR Afrobarometer voting incentive OR clientelism study"
+  },
+  {
+   "label": "Electoral violence tracking",
+   "lang": "en",
+   "standing": "research",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"electoral violence\" data OR ACLED election OR political violence tracker"
+  },
+  {
+   "label": "Voting rights litigation",
+   "lang": "en",
+   "standing": "rights",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"voting rights\" lawsuit OR redistricting challenge OR \"Voting Rights Act\" case"
+  },
+  {
+   "label": "Disinformation monitoring",
+   "lang": "en",
+   "standing": "rights",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "election disinformation report OR platform political ads policy OR deepfake voters"
+  },
+  {
+   "label": "Registration and access campaigns",
+   "lang": "en",
+   "standing": "rights",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"registration drive\" OR \"automatic voter registration\" OR polling access campaign"
+  },
+  {
+   "label": "Transparency and lobbying",
+   "lang": "en",
+   "standing": "rights",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"lobbying register\" OR \"transparency register\" OR beneficial ownership political donation"
+  },
+  {
+   "label": "Opposition and civic space",
+   "lang": "en",
+   "standing": "rights",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "opposition leader arrested OR party deregistered OR civic space election crackdown"
+  },
+  {
+   "label": "Internet shutdowns",
+   "lang": "en",
+   "standing": "rights",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"internet shutdown\" election OR social media blocked vote OR connectivity restricted polls"
+  }
+ ]
 }
